@@ -1,0 +1,35 @@
+{
+  "name": "CleverCompanion",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n bs,ios -c yellow,magenta,green  \"npm run bs:watch\" \"npm run start:ios\"",
+    "rn:start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "bs:build": "bsb -clean-world -make-world",
+    "bs:watch": "bsb -clean-world -make-world -w",
+    "start:ios": "react-native run-ios",
+    "start:android": "react-native run-android"
+  },
+  "dependencies": {
+    "@glennsl/bs-json": "^4.0.0",
+    "bs-fetch": "^0.5.0",
+    "react": "16.8.3",
+    "react-native": "0.59.9",
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.60.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "bs-platform": "^5.0.4",
+    "concurrently": "^4.1.0",
+    "jest": "^24.8.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
